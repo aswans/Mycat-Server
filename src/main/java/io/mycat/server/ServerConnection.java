@@ -120,7 +120,7 @@ public class ServerConnection extends FrontendConnection {
 	
 	/**
 	 * 
-	 * 清空食事务中断
+	 * 清空事务中断
 	 * */
 	public void clearTxInterrupt() {
 		if (!autocommit && txInterrupted) {

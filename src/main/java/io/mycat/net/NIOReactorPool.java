@@ -27,4 +27,8 @@ public class NIOReactorPool {
         }
         return reactors[i];
 	}
+	public static void main(String[] args) throws IOException {
+		NIOReactorPool reactorPool = new NIOReactorPool("$_NIOREACTOR",4);
+		reactorPool.getNextReactor();
+	}
 }

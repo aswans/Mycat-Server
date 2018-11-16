@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE mycat:schema SYSTEM "schema.dtd">
+<mycat:schema xmlns:mycat="http://io.mycat/">
+
+	<schema name="GISDB" checkSQLschema="false" sqlMaxLimit="">
+		<table name="travelrecord" dataNode="dn1" autoIncrement="true"
+			primaryKey="travelrecord_id" />
+	</schema>
+	<dataNode name="dn1" dataHost="40.31" database="db1" />
+	<dataHost name="40.31" maxCon="1000" minCon="10" writeType="0"
+		dbType="mysql" dbDriver="native" switchType="1" balance="0"
+		slaveThreshold="100">
+		<heartbeat>select user()</heartbeat>
+		<writeHost host="hostM1" url="192.168.40.31:3306" user="root"
+			password="123456">
+		</writeHost>
+	</dataHost>
+</mycat:schema>
