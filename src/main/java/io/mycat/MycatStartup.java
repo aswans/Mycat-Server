@@ -51,7 +51,8 @@ public final class MycatStartup {
             }
             // init
             MycatServer server = MycatServer.getInstance();
-            server.beforeStart();
+            //这个是不是重复调用了，上面已经执行过SystemConfig.getHomePath();
+            //server.beforeStart();
 
             // startup
             server.startup();
